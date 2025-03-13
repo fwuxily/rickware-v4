@@ -1,189 +1,192 @@
 getgenv().RickWare = {
-    ['Start'] = {
-        ['Intro'] = true,
-    },
-    
-    ['Camera Lock'] = {
-        ['Enabled'] = true,
-        
-        ['Smoothness'] = {
-            ['Enabled'] = true,
-            ['Value'] = 0.9,
-            
-            ['Shake'] = {
-                ['Enabled'] = false,
-                ['Value'] = 3,
-                ['Multiplier'] = 0.1,
-                
-                ['Parts'] = {
-                    ['Hitpart'] = 'HumanoidRootPart',
-                    ['Airpart'] = 'LowerTorso',
-                },
-            },
+    ["Camera Lock"] = {
+        ["Enabled"] = true,
+        ["Smoothness"] = {
+            ["Enabled"] = true,
+            ["Value"] = 0.9
         },
-    },
-    
-    ['Target Aim'] = {
-        ['Enabled'] = true,
-        ['Lock Type'] = 'Namecall',  --// Index, Namecall \\--
-        ['Look At'] = false,
-        ['View'] = false,
-        ['Keybind'] = "Q",
-        
-        ['Parts'] = {
-            ['Hitpart'] = 'HumanoidRootPart',
-            ['Airpart'] = 'LowerTorso',
-        
-        ['Prediction'] = { --// For both camlock and target aim \\--
-            ['Horizontal'] = 0.1,
-            ['Vertical'] = 0.1,
-			},
+        ["Shake"] = {
+            ["Enabled"] = false,
+            ["Value"] = 3,
+            ["Multiplier"] = 0.1
         },
-    },
-	
-	['Toggle Lock'] = {
-		['Method'] = 'Button',  --// Button, Tool, None \\--
-    },
-	
-	['Resolver'] = {
-		['Enabled'] = false,
-        ['Resolver Button'] = true,
-        ['Keybind'] = "G",
-    },
-	
-	['Auto Air'] = {
-        ['Enabled'] = false,
-        ['Auto Air Button'] = true,
-        ['Delay'] = 0.22,
-        ['Keybind'] = "C",
-    },
-	
-    ['Offsets'] = {
-        ['Jump Offset'] = -0.3,
-        ['Fall Offset'] = 0.27,
-    },
-    
-    ['Auto Reload'] = {
-        ['Enabled'] = true,
-        ['Ammo Value'] = 0, --// If the ammo is 0 it will auto reload \\--
-    },
-	
-    ['Macro'] = {
-        ['Enabled'] = true,
-        ['Macro'] = false,
-        ['Auto Macro'] = false,
-        ['Delay'] = 0.025,
-        ['Keybind'] = "X",
-        
-        ['Buttons'] = {
-            ['Macro Button'] = false,
-            ['Auto Macro Button'] = true,
+        ["Parts"] = {
+            ["Hitpart"] = "HumanoidRootPart",
+            ["Airpart"] = "LowerTorso"
         },
+        ["Prediction"] = {
+            ["Horizontal"] = 0.1,
+            ["Vertical"] = 0.1
+        }
     },
-    
-    ['CFrame'] = {
-        ['Enabled'] = false,
-        ['CFrame Button'] = true,
-        ['Speed'] = 0.65,
-        ['Keybind'] = "T",
+    ["Target Aim"] = {
+        ["Enabled"] = true,
+        ["Lock Type"] = "Namecall",
+        ["Look At"] = false,
+        ["View"] = false,
+        ["Keybind"] = "Q",
+        ["Parts"] = {
+            ["Hitpart"] = "HumanoidRootPart",
+            ["Airpart"] = "LowerTorso"
+        },
+        ["Prediction"] = {
+            ["Horizontal"] = 0.1,
+            ["Vertical"] = 0.1
+        }
     },
-	
-	['Rapid Fire'] = {
-        ['Enabled'] = false,
-		["Slowdown Time"] = 1,
-        ['Cooldown'] = 0.0001,
+    ["Silent Aim"] = {
+        ["Enabled"] = false,
+        ["Radius"] = 100,
+        ["Color"] = Color3.fromRGB(255, 255, 255),
+        ["Filled"] = false,
+        ["Thickness"] = 2,
+        ["Transparency"] = 0.5,
+        ["Method"] = "Center", --// Mouse, Center \\--
+        ["Sticky"] = false --// The circle will stick to the target \\--
     },
-    
-	["Checks"] = {
-		["Enabled"] = false,
-		["KO Check"] = true,
-		["KnockThreshold"] = 5, --// Unlocks when their health is 5 or less	\\--
-		["Friend Check"] = true,
-		["Team Check"] = false,
-	},
-	
-	["Click To Tp"] = {
-		["Enabled"] = false,
-		["Type"] = "Button", --// Tool, Button \\--
-	},
-	
-	["AimView"] = {
-		["Enabled"] = false,
-		["Aimviewer"] = true, --// For voidfall games only \\--
-	},
-	
-	["ESP"] = {
-		["Checks"] = {
-			["Friend Check"] = true, --// Makes your friends have a different esp color \\--
-			["Hide Friends"] = false, --// Hides your friends esp \\--
-			["Target Only"] = true, --// Only esp on your target \\--
-			["Team Check"] = false,
-			["Highlighter"] = {
-				["Enabled"] = false,
-				["Highlighter Color"] = Color3.fromRGB(255, 0, 0),
-				["Transparency"] = 0.5,
-				["Outline Color"] = Color3.fromRGB(255, 255, 255),
-				["Outline Transparency"] = 0,
-				["Friend Highlighter Color"] = Color3.fromRGB(0, 255, 0),
-				["Name Esp"] = {
-					["Enabled"] = false,
-					["Name Esp Color"] = Color3.fromRGB(255, 0, 0),
-					["Friend Name Esp Color"] = Color3.fromRGB(0, 255, 0),
-					["Name Esp Type"] = "DisplayName", --// DisplayName, UserName, UserId \\--
-					["Font"] = "Arcade",
-					["Text Size"] = UDim2.new(0, 50, 0, 50),
-					["Trail"] = {
-						["Enabled"] = false,
-						["Trail LifeTime"] = 1,
-						["Trail Color"] = Color3.fromRGB(255, 0, 0),
-						["Trail Width"] = 0.08,
-					},
-				},
-			},
-		},
-	},
-	--// Button config (dont touch for default) \\--
-    ['Lock Button'] = {
-        ['Size'] = UDim2.new(0, 100, 0, 100),
-        ['BackgroundColor'] = Color3.fromRGB(0, 0, 0),
-        ['Transparency'] = 0.3,
-        ['Position'] = UDim2.new(0, 100, 0, 50),
+    ["Checks"] = {
+        ["Enabled"] = false,
+        ["KO Check"] = true,
+        ["Friend Check"] = false,
+        ["Team Check"] = false,
+        ["Wall Check"] = false,
+        ["Vehicle Check"] = false
     },
-    
-    ['Auto Air Button'] = {
-        ['Size'] = UDim2.new(0, 55, 0, 55),
-        ['BackgroundColor'] = Color3.fromRGB(0, 0, 0),
-        ['Transparency'] = 0.3,
-        ['Position'] = UDim2.new(0, 700, 0, 150),
+    ["Toggle Lock"] = {
+        ["Method"] = "Button" --// Tool, None, Button \\--
     },
-    
-    ['Resolver Button'] = {
-        ['Size'] = UDim2.new(0, 65, 0, 65),
-        ['BackgroundColor'] = Color3.fromRGB(0, 0, 0),
-        ['Transparency'] = 0.3,
-        ['Position'] = UDim2.new(0, 200, 0, 200),
+    ["Resolver"] = {
+        ["Enabled"] = false,
+        ["Resolver Button"] = true,
+        ["Keybind"] = "G"
     },
-    
-    ['CFrame Button'] = {
-        ['Size'] = UDim2.new(0, 50, 0, 50),
-        ['BackgroundColor'] = Color3.fromRGB(0, 0, 0),
-        ['Transparency'] = 0.3,
-        ['Position'] = UDim2.new(0, 300, 0, 300),
+    ["Auto Air"] = {
+        ["Enabled"] = false,
+        ["Auto Air Button"] = true,
+        ["Delay"] = 0.22,
+        ["Keybind"] = "C"
     },
-	
-    ['Tp Button'] = {
-        ['Size'] = UDim2.new(0, 45, 0, 45),
-        ['BackgroundColor'] = Color3.fromRGB(0, 0, 0),
-        ['Transparency'] = 0.3,
-        ['Position'] = UDim2.new(0, 300, 0, 200),
+    ["Offsets"] = {
+        ["Jump Offset"] = 0.3,
+        ["Fall Offset"] = 0.27
     },
-	
-    ['Notification'] = {
-        ['Enabled'] = true,
-        ['Sound'] = 'rbxassetid://5153734608',
-        ['Time'] = 3,
-        ['Audio'] = false,
+    ["Auto Reload"] = {
+        ["Enabled"] = false,
+        ["Ammo Value"] = 0
     },
+    ["Macro"] = {
+        ["Enabled"] = true,
+        ["Macro"] = false,
+        ["Auto Macro"] = false,
+        ["Delay"] = 0.025,
+        ["Keybind"] = "X",
+        ["Buttons"] = {
+            ["Macro Button"] = false,
+            ["Auto Macro Button"] = true
+        }
+    },
+    ["CFrame"] = {
+        ["Enabled"] = false,
+        ["CFrame Button"] = true,
+        ["Speed"] = 0.65,
+        ["Keybind"] = "T"
+    },
+    ["Rapid Fire"] = {
+        ["Enabled"] = false,
+        ["Slowdown Time"] = 1,
+        ["Cooldown"] = 0.0001
+    },
+    ["Click To Tp"] = {
+        ["Enabled"] = false,
+        ["Type"] = "Button"
+    },
+    ["ESP"] = {
+        ["Checks"] = {
+            ["Enabled"] = false,
+            ["Target Only"] = false,
+            ["Friend Check"] = true,
+            ["Friend Esp Color"] = Color3.fromRGB(0, 255, 0),
+            ["Hide Friends"] = false,
+            ["Team Check"] = true,
+            ["Team Esp Color"] = Color3.fromRGB(0, 0, 255),
+            ["Hide Team"] = false
+        },
+        ["Highlighter"] = {
+            ["Enabled"] = false,
+            ["Highlighter Color"] = Color3.fromRGB(255, 0, 0),
+            ["Transparency"] = 0.5,
+            ["Outline Color"] = Color3.fromRGB(255, 255, 255),
+            ["Outline Transparency"] = 0
+        },
+        ["Name Esp"] = {
+            ["Enabled"] = false,
+            ["Name Esp Color"] = Color3.fromRGB(255, 0, 0),
+            ["Friend Name Esp Color"] = Color3.fromRGB(0, 255, 0),
+            ["Name Esp Type"] = "DisplayName",
+            ["Font"] = "Arcade",
+            ["Text Size"] = 14
+        }
+    },
+    ["Local Player"] = {
+        ["Trail"] = {
+            ["Enabled"] = false,
+            ["Trail LifeTime"] = 1,
+            ["Trail Color"] = Color3.fromRGB(255, 255, 255),
+            ["Rainbow Trail"] = false
+        },
+        ["Self Cham"] = {
+            ["Enabled"] = false,
+            ["Self Cham Color"] = Color3.fromRGB(255, 255, 255),
+            ["Rainbow Self Cham"] = false
+        },
+        ["Accessory Cham"] = {
+            ["Enabled"] = false,
+            ["Accessory Cham Color"] = Color3.fromRGB(255, 255, 255),
+            ["Rainbow Cham"] = false
+        },
+        ["Tool Cham"] = {
+            ["Enabled"] = false,
+            ["Tool Cham Color"] = Color3.fromRGB(255, 255, 255),
+            ["Rainbow Tool Cham"] = true
+        }
+    },
+    --// Button Configs \\--
+    ["Lock Button"] = {
+        ["Size"] = UDim2.new(0, 100, 0, 100),
+        ["BackgroundColor"] = Color3.fromRGB(0, 0, 0),
+        ["Transparency"] = 0.3,
+        ["Position"] = UDim2.new(0, 100, 0, 50)
+    },
+    ["Auto Air Button"] = {
+        ["Size"] = UDim2.new(0, 55, 0, 55),
+        ["BackgroundColor"] = Color3.fromRGB(0, 0, 0),
+        ["Transparency"] = 0.3,
+        ["Position"] = UDim2.new(0, 700, 0, 150)
+    },
+    ["Resolver Button"] = {
+        ["Size"] = UDim2.new(0, 65, 0, 65),
+        ["BackgroundColor"] = Color3.fromRGB(0, 0, 0),
+        ["Transparency"] = 0.3,
+        ["Position"] = UDim2.new(0, 200, 0, 200)
+    },
+    ["CFrame Button"] = {
+        ["Size"] = UDim2.new(0, 50, 0, 50),
+        ["BackgroundColor"] = Color3.fromRGB(0, 0, 0),
+        ["Transparency"] = 0.3,
+        ["Position"] = UDim2.new(0, 300, 0, 300)
+    },
+    ["Tp Button"] = {
+        ["Size"] = UDim2.new(0, 45, 0, 45),
+        ["BackgroundColor"] = Color3.fromRGB(0, 0, 0),
+        ["Transparency"] = 0.3,
+        ["Position"] = UDim2.new(0, 300, 0, 200)
+    },
+    ["Notification"] = {
+        ["Enabled"] = false,
+        ["Sound"] = "rbxassetid://5153734608",
+        ["Time"] = 3,
+        ["Audio"] = false
+    }
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/shakar60/scripts/refs/heads/main/RickWare.CC",true))()
